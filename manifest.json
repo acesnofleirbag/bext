@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "bext",
+    "version": "0.1.0",
+    "description": "Example of a browser extension",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "action": {
+        "default_popup": "src/popup/index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["src/content.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["src/background.js"]
+    }
+}
+
